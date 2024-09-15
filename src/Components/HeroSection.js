@@ -15,7 +15,7 @@ const HeroSection = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    arrows: true, // You can enable arrows if you want
+    arrows: false, // You can enable arrows if you want
     dotsClass: "slick-dots custom-dots",  // Custom class for dots
     prevArrow: (
       <button className="slick-prev custom-arrow left-5 text-black">◀</button>

@@ -6,7 +6,7 @@ const Packages = () => {
       <h2 className="text-3xl font-bold mb-4">Package Offers</h2>
       <div className="flex">
         {/* Sidebar */}
-        <div className="w-1/4">
+        {/* <div className="w-1/4">
           <div className="bg-gray-100 p-4 rounded-lg shadow-md">
             <h3 className="font-bold text-lg mb-4">Hot Deals</h3>
             <ul>
@@ -15,7 +15,7 @@ const Packages = () => {
               <li className="py-2">Middle East</li>
             </ul>
           </div>
-        </div>
+        </div> */}
 
         {/* Packages Cards */}
         <div className="w-3/4 flex justify-around flex-wrap">

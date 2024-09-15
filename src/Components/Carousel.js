@@ -1,3 +1,78 @@
+import React, { useState,useEffect} from 'react';
+import bg from "../Assets/Images/balloon.png";
+
+const Carousel = () => {
+  const images = [
+    'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/01/b1/89/43/bombay-museum-chhatrapati.jpg?w=1400&h=500&s=1',
+    'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/24/03/3f/fd/caption.jpg?w=1400&h=500&s=1&cx=2294&cy=1952&chk=v1_c3b28b866491ff3722ce',
+    'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/d2/2f/7a/palace-from-the-outside.jpg?w=1400&h=500&s=1'
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); // 5 seconds
+    return () => clearInterval(interval);
+  }, []);
+
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const goToPrevious = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  return (
+    <div className="relative  overflow-hidden">
+      <div
+        className="flex transition-transform ease-out duration-500"
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+      >
+        {images.map((img, idx) => (
+          <img
+            key={idx}
+            src={bg}
+            alt={`Slide ${idx + 1}`}
+            className="w-full h-1/6 object-cover"
+          />
+        ))}
+      </div>
+
+      {/* Previous Button */}
+      <button
+        className="absolute top-2/4 left-4 transform -translate-y-1/2 bg-black text-white p-2 rounded-full"
+        onClick={goToPrevious}
+      >
+        &#10094;
+      </button>
+
+      {/* Next Button */}
+      <button
+        className="absolute top-2/4 right-4 transform -translate-y-1/2 bg-black text-white p-2 rounded-full"
+        onClick={goToNext}
+      >
+        &#10095;
+      </button>
+
+      {/* Pagination Dots */}
+      <div className="absolute bottom-40 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        {images.map((_, idx) => (
+          <div
+            key={idx}
+            className={`w-3 h-3 rounded-full" '${currentIndex === idx ? 'bg-gray-800' : 'bg-gray-400'}`}
+          ></div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Carousel;
 // import React from "react";
 // // import Slider from "react-slick";
 // import "slick-carousel/slick/slick.css";

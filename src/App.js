@@ -1,6 +1,7 @@
 //import './App.css';
 import React from 'react';
 import Home from "./Screens/Home/Home.js";
+import Product from "./Screens/Products/Product.js";
 // import 'swiper/swiper-bundle.min.css';
 import {
   BrowserRouter as Router,
@@ -15,6 +16,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route exact path="/" element={<Home/>} />
+        <Route exact path="/product" element={<Product/>} />
       </Routes>
 
     </div>
