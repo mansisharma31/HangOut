@@ -1,7 +1,9 @@
 import React from 'react';
 import Slider from "react-slick";
 import "./HeroSection.css"
-import bg from "../Assets/Images/hot-balloon.webp";
+// import bg from "../Assets/Images/hot-balloon.webp";
+//import cafe from "../Assets/Images/cafebg.jpg";
+import cafe1 from "../Assets/Images/cafe1.cms";
 import search from "../Assets/Images/Frame.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -15,8 +17,8 @@ const HeroSection = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    arrows: false, // You can enable arrows if you want
-    dotsClass: "slick-dots custom-dots",  // Custom class for dots
+    arrows: false, 
+    dotsClass: "slick-dots custom-dots",  
     prevArrow: (
       <button className="slick-prev custom-arrow left-5 text-black">◀</button>
     ),
@@ -29,21 +31,21 @@ const HeroSection = () => {
       <Slider {...settings}>
         <div>
           <img
-            src={bg}
+            src={cafe1}
             alt="Hot Air Balloon"
             className="w-full h-[500px] object-cover"
           />
         </div>
         <div>
           <img
-            src={bg}
+            src={cafe1}
             alt="Second Slide"
             className="w-full h-[500px] object-cover"
           />
         </div>
         <div>
           <img
-            src={bg}
+            src={cafe1}
             alt="Third Slide"
             className="w-full h-[500px] object-cover"
           />
