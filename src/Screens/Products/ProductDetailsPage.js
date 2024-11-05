@@ -5,10 +5,10 @@ import { useParams } from 'react-router-dom';
 export const ProductDetailsPage = () => {
     const { id } = useParams();
 
-    // Find the cafe data based on the id from params
+    
     const cafeData = cafesDataArray.find((data) => data.id == id);
     console.log(cafeData)
-    // Initialize state for reviews and new review unconditionally
+    
     const [activeTab, setActiveTab] = useState("details");
     const [reviews, setReviews] = useState([
         { name: "John Doe", text: "Amazing food and great service!", rating: 5 },
@@ -16,7 +16,7 @@ export const ProductDetailsPage = () => {
     ]);
     const [newReview, setNewReview] = useState({ name: "", text: "", rating: 1 });
 
-    //Check if cafeData is not found to return early
+    
     if (!cafeData) {
         return (
             <div>
@@ -40,15 +40,13 @@ export const ProductDetailsPage = () => {
 
     return (
         <div className="bg-gradient-to-b from-[#FAF7F0] to-[#D8D2C2] min-h-screen">
-            {/* Hero Section */}
+            
             <div className="container mx-auto px-6 lg:px-12 py-12">
                 <div className="flex justify-between items-center mb-6">
                     <h1 className="text-6xl font-extrabold text-[#4A4947] animate-fade-in">
                         {cafeData.title}
                     </h1>
-                    <button className="bg-[#B17457] text-white px-5 py-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-                        Save
-                    </button>
+                    
                 </div>
                 <p className="text-md text-[#4A4947] mb-4">
                     {cafeData.rank} | {cafeData.price}, {cafeData.cuisine}
@@ -56,11 +54,11 @@ export const ProductDetailsPage = () => {
                 <div className="flex items-center space-x-4 mb-6 text-sm">
                     <span className="text-[#4A4947]">{cafeData.reviews} reviews</span>
                     <span className="text-gold-500 font-semibold">⭐ {cafeData.rank}</span>
-                    <span className="text-[#B17457] cursor-pointer hover:underline">💬 Write a Review</span>
+                    {/* <span className="text-[#B17457] cursor-pointer hover:underline">💬 Write a Review</span> */}
                     <span className="text-green-600 font-medium">🕒 {cafeData.timings}</span>
                 </div>
 
-                {/* Main Image with Enhanced Effects */}
+                
                 <div className="grid grid-cols-3 gap-6 mb-6">
                     <div className="col-span-2 relative overflow-hidden rounded-lg shadow-lg transition-transform transform hover:scale-105">
                         <img
@@ -96,9 +94,9 @@ export const ProductDetailsPage = () => {
                 </div>
             </div>
 
-            {/* Main Content */}
+          
             <div className="container mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-3 gap-12 py-12">
-                {/* Sticky Sidebar for Quick Info */}
+               
                 <aside className="hidden lg:block lg:sticky lg:top-20 bg-white p-6 rounded-lg shadow-xl h-fit">
                     <h2 className="text-xl font-semibold mb-4 text-[#B17457]">Quick Info</h2>
                     <p className="text-sm text-gray-500 mb-2">PRICE RANGE</p>
@@ -113,9 +111,9 @@ export const ProductDetailsPage = () => {
                     </a>
                 </aside>
 
-                {/* Main Content Area */}
+               
                 <div className="lg:col-span-2">
-                    {/* Tab Navigation */}
+                   
                     <div className="flex justify-center border-b mb-6">
                         {["details", "reviews", "location"].map((tab) => (
                             <button
@@ -132,7 +130,7 @@ export const ProductDetailsPage = () => {
                         ))}
                     </div>
 
-                    {/* Tab Content */}
+                   
                     <div>
                         {activeTab === "details" && (
                             <div className="bg-white p-6 rounded-lg shadow-xl mb-6">
@@ -158,7 +156,7 @@ export const ProductDetailsPage = () => {
                                         </li>
                                     ))}
                                 </ul>
-                                {/* Add Review */}
+                               
                                 <div className="mt-6">
                                     <h3 className="text-xl font-semibold text-[#B17457]">Add a Review</h3>
                                     <form onSubmit={handleReviewSubmit} className="mt-4">
@@ -212,7 +210,7 @@ export const ProductDetailsPage = () => {
                             <div className="bg-white p-6 rounded-lg shadow-lg mb-6">
                                 <h2 className="text-2xl font-bold mb-4 text-[#B17457]">Location</h2>
                                 <p className="text-gray-700">Find us at:</p>
-                                <a href={cafeData.mapLink} className="text-blue-600 mt-2 block hover:underline">{cafeData.mapLink}</a>
+                                <iframe src={cafeData.mapLink} className="text-blue-600 mt-2 block hover:underline">{cafeData.mapLink}</iframe>
                                 {/* <p className="text-blue-500 cursor-pointer">{cafeData.mapLink}</p> */}
                                 {/* Map or directions can go here */}
                             </div>

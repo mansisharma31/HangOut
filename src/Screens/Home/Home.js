@@ -50,7 +50,7 @@ const HomePage = () => {
             Adventures <br /> Tailored for You!
           </h2>
           <p className="mt-6 text-lg leading-relaxed">
-            Let our AI plan your perfect day. Whether it’s a cafe visit or an
+            Let us plan your perfect day. Whether it’s a cafe visit or an
             adventurous activity, HangOut offers personalized recommendations
             based on your budget, location, and time.
           </p>
@@ -61,7 +61,7 @@ const HomePage = () => {
     onClick={openModal}
     className="inline-block bg-[#B17457] text-white font-semibold text-lg py-2 px-4 rounded-lg transition duration-300 hover:bg-[#A56348] hover:scale-105 hover:shadow-[0_0_20px_5px_rgba(178,116,87,0.7)]"
   >
-    AI Genie
+    Genie
   </a>
 </div>
           <Modal isOpen={isModalOpen} onClose={closeModal}><AIRecommendations /></Modal>

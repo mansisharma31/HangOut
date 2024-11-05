@@ -26,7 +26,7 @@ const Navbar = () =>{
       </h1>
     </div>
     <div className="flex items-center space-x-6">
-      <a href="#" className=" text-lg relative hover:text-[#B17457] transition duration-300">Home</a>
+      <a href="/" className=" text-lg relative hover:text-[#B17457] transition duration-300">Home</a>
       <a href="#" className=" text-lg relative hover:text-[#B17457] transition duration-300">Events</a>
       <a href="#" className=" text-lg relative hover:text-[#B17457] transition duration-300">Activities</a>
       <a href="#" className=" text-lg relative hover:text-[#B17457] transition duration-300">Dining</a>
@@ -53,7 +53,7 @@ const Navbar = () =>{
         onClick={openModal}
         className="mr-6 text-lg bg-[#B17457] text-white font-semibold py-1 px-4 rounded-lg transform transition-all duration-300 hover:bg-[#A56348] hover:scale-105 hover:shadow-[0_0_20px_5px_rgba(178,116,87,0.7)]"
       >
-        AI Genie
+        Genie
       </a>
       <Modal isOpen={isModalOpen} onClose={closeModal}><AIRecommendations /></Modal>
     </div>

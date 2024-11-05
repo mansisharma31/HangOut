@@ -62,7 +62,7 @@ export const Delhi = () => {
   return (
     <div>
         <Navbar />
-    <div className="mt-8 ml-20 mr-20 p-2 bg-white border-white shadow-md rounded-lg overflow-hidden">
+    <div className="mt-8 ml-20 mr-20 p-3 bg-[#ebe7de] border-white shadow-md rounded-lg overflow-hidden">
       <h1 className="text-2xl font-bold mb-4">Delhi</h1>
       <Swiper spaceBetween={20}       
         slidesPerView={3}        

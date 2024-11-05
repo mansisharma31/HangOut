@@ -23,7 +23,7 @@ const ProductPage = () => {
 
   return (
     <div className="bg-gradient-to-b from-gray-50 to-gray-100 min-h-screen">
-      {/* Hero Section */}
+     
       <div className="container mx-auto px-6 lg:px-12 py-12">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-6xl font-extrabold text-gray-800 animate-fade-in">
@@ -43,7 +43,7 @@ const ProductPage = () => {
           <span className="text-green-600 font-medium">🕒 Open Now 9:00 am - 10:00 pm</span>
         </div>
 
-        {/* Main Image with Enhanced Effects */}
+        
         <div className="grid grid-cols-3 gap-6 mb-6">
           <div className="col-span-2 relative overflow-hidden rounded-lg shadow-lg transition-transform transform hover:scale-105">
             <img
@@ -85,9 +85,9 @@ const ProductPage = () => {
         </div>
       </div>
 
-      {/* Main Content */}
+      
       <div className="container mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-3 gap-12 py-12">
-        {/* Sticky Sidebar for Quick Info */}
+        
         <aside className="hidden lg:block lg:sticky lg:top-20 bg-white p-6 rounded-lg shadow-xl h-fit">
           <h2 className="text-xl font-semibold mb-4 text-teal-600">Quick Info</h2>
           <p className="text-sm text-gray-500 mb-2">PRICE RANGE</p>
@@ -102,9 +102,9 @@ const ProductPage = () => {
           </a>
         </aside>
 
-        {/* Main Content Area */}
+        
         <div className="lg:col-span-2">
-          {/* Tab Navigation with Improved Styles */}
+          
           <div className="flex justify-center border-b mb-6">
             {["details", "reviews", "location"].map((tab) => (
               <button
@@ -121,7 +121,7 @@ const ProductPage = () => {
             ))}
           </div>
 
-          {/* Tab Content */}
+        
           <div>
             {activeTab === "details" && (
               <div className="bg-white p-6 rounded-lg shadow-xl mb-6">
@@ -149,7 +149,7 @@ const ProductPage = () => {
                     </li>
                   ))}
                 </ul>
-                {/* Add Review */}
+               
                 <div className="mt-6">
                   <h3 className="text-xl font-semibold text-teal-600">Add a Review</h3>
                   <form onSubmit={handleReviewSubmit} className="mt-4">
@@ -203,7 +203,7 @@ const ProductPage = () => {
                 <h2 className="text-2xl font-bold mb-4 text-teal-600">Location</h2>
                 <p className="text-gray-700">Located at: Pullman New Delhi Aerocity</p>
                 <p className="text-gray-700">Indira Gandhi International Airport, New Delhi, India</p>
-                {/* Google Maps Embed */}
+                
                 <div className="mt-4">
                   <iframe
                     className="w-full h-64 rounded-lg shadow-lg"

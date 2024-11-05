@@ -209,7 +209,7 @@ const CardCarousel = () => {
         ))}
       </Swiper>
     </div> */}
-    <div className="mt-20 ml-20 mr-20 p-2 bg-white border-white shadow-md rounded-lg overflow-hidden">
+    <div className="mt-20 ml-20 mr-20 p-3 bg-[#ebe7de] border-white shadow-md rounded-lg overflow-hidden">
       <h1 className="text-2xl font-bold mb-4">Cafes and Restaurants</h1>
       <Swiper spaceBetween={20}       
         slidesPerView={3}      
@@ -225,8 +225,8 @@ const CardCarousel = () => {
         ))}
       </Swiper>
     </div>
-    <div className="mt-20 ml-20 mr-20 p-2 bg-white border-white shadow-md rounded-lg overflow-hidden">
-      <h1 className="text-2xl font-bold mb-4">Events and Concerts</h1>
+    <div className="mt-20 ml-20 mr-20 p-3 bg-[#ebe7de] border-white shadow-md rounded-lg overflow-hidden">
+      <h1 className="text-2xl font-bold mb-4 text-[#000]">Events and Concerts</h1>
       <Swiper spaceBetween={20}       
         slidesPerView={3}      
         navigation={true}          
@@ -241,7 +241,7 @@ const CardCarousel = () => {
         ))}
       </Swiper>
     </div>
-    <div className="mt-20 ml-20 mr-20 p-2 bg-white border-white shadow-md rounded-lg overflow-hidden">
+    <div className="mt-20 ml-20 mr-20 p-3 bg-[#ebe7de] border-white shadow-md rounded-lg overflow-hidden">
       <h1 className="text-2xl font-bold mb-4">Trips and Treks</h1>
       <Swiper spaceBetween={20}       
         slidesPerView={3}      
@@ -257,7 +257,7 @@ const CardCarousel = () => {
         ))}
       </Swiper>
     </div>
-    <div className="mt-20 ml-20 mr-20 p-2 bg-white border-white shadow-md rounded-lg overflow-hidden">
+    <div className="mt-20 ml-20 mr-20 p-3 bg-[#ebe7de] border-white shadow-md rounded-lg overflow-hidden">
       <h1 className="text-2xl font-bold mb-4">Adventure Parks</h1>
       <Swiper spaceBetween={20}       
         slidesPerView={3}      

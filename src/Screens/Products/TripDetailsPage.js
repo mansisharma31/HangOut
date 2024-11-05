@@ -46,12 +46,10 @@ export const TripDetailsPage = () => {
                     <h1 className="text-6xl font-extrabold text-[#4A4947] animate-fade-in">
                         {tripData.title}
                     </h1>
-                    <button className="bg-[#B17457] text-white px-5 py-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-                        Save
-                    </button>
+                    
                 </div>
                 <p className="text-md text-[#4A4947] mb-4">
-                    {tripData.rank} | {tripData.price}, {tripData.cuisine}
+                    {tripData.rank} | {tripData.price}
                 </p>
                 <div className="flex items-center space-x-4 mb-6 text-sm">
                     <span className="text-[#4A4947]">{tripData.reviews} reviews</span>
@@ -103,10 +101,10 @@ export const TripDetailsPage = () => {
                     <h2 className="text-xl font-semibold mb-4 text-[#B17457]">Quick Info</h2>
                     <p className="text-sm text-gray-500 mb-2">PRICE RANGE</p>
                     <p className="text-sm text-black">{tripData.price}</p>
-                    <p className="text-sm text-gray-500 mt-4">CUISINES</p>
-                    <p className="text-sm text-black">{tripData.cuisine}</p>
-                    <p className="text-sm text-gray-500 mt-4">SPECIAL DIETS</p>
-                    <p className="text-sm text-black">{tripData.specialDiets.join(", ")}</p>
+                    {/* <p className="text-sm text-gray-500 mt-4">CUISINES</p>
+                    <p className="text-sm text-black">{tripData.cuisine}</p> */}
+                    {/* <p className="text-sm text-gray-500 mt-4">SPECIAL DIETS</p>
+                    <p className="text-sm text-black">{tripData.specialDiets.join(", ")}</p> */}
                     <p className="text-sm text-gray-500 mt-4">📞 {tripData.contact}</p>
                     <a href={tripData.website} className="text-[#B17457] mt-4 block hover:underline">
                         🌐 Visit Website

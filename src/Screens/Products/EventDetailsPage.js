@@ -46,9 +46,7 @@ export const EventDetailsPage = () => {
                     <h1 className="text-6xl font-extrabold text-[#4A4947] animate-fade-in">
                         {eventData.title}
                     </h1>
-                    <button className="bg-[#B17457] text-white px-5 py-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-                        Save
-                    </button>
+                    
                 </div>
                 <p className="text-md text-[#4A4947] mb-4">
                     {eventData.rank} | {eventData.price}, {eventData.cuisine}
