@@ -27,9 +27,12 @@ import HangOut from '../../Assets/Images/HangOut.png';
 import Carbg from '../../Assets/Images/Carbg.png';
 import Modal from "../../Components/Modal";
 import AIRecommendations from "../../Components/AIRecommendations";
+// import RecommendationForm from "../../Components/RecommendationForm";
 import { FaMapMarkerAlt, FaMoneyBillWave, FaClock } from "react-icons/fa";
 import CardCarousel from '../../Components/CardCarousel'; 
 import Navbar from '../../Components/Navbar'; 
+import PlanDayForm from "../../Components/PlanDayForm";
+import RecommendationForm from "../../Components/RecommendationForm";
 
 const HomePage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -64,7 +67,7 @@ const HomePage = () => {
     Genie
   </a>
 </div>
-          <Modal isOpen={isModalOpen} onClose={closeModal}><AIRecommendations /></Modal>
+          <Modal isOpen={isModalOpen} onClose={closeModal}><RecommendationForm /></Modal>
         </div>
         <div className="lg:w-1/2 mt-12 lg:mt-0">
           <div className="relative w-full h-96">
